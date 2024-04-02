@@ -1,11 +1,26 @@
 import React from "react";
 import "./App.css";
-import Title from "./Title";
+import Slide from "./components/Slide/Slide";
+
+const slides = [
+  {
+    id: "slide 1",
+    text: "Slide 1",
+  },
+  {
+    id: "slide 2",
+    text: "Slide 2",
+  },
+  {
+    id: "slide 3",
+    text: "Slide 3",
+  },
+];
 
 const App = () => {
   return (
-    <div className="container">
-      <Title />
+    <div>
+      <Slide slides={slides} />
     </div>
   );
 };
