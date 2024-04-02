@@ -39,8 +39,12 @@ const Slide = ({ slides }) => {
         ))}
       </div>
       <nav className={styles.nav}>
-        <button onClick={slidePrev}>Anterior</button>
-        <button onClick={slideNext}>Próximo</button>
+        <button disabled={active === 0} onClick={slidePrev}>
+          Anterior
+        </button>
+        <button disabled={active === slides.length - 1} onClick={slideNext}>
+          Próximo
+        </button>
       </nav>
     </section>
   );
