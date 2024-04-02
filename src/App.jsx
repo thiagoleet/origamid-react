@@ -1,27 +1,15 @@
 import React from "react";
 import "./App.css";
-import Slide from "./components/Slide/Slide";
-
-const slides = [
-  {
-    id: "slide 1",
-    text: "Slide 1",
-  },
-  {
-    id: "slide 2",
-    text: "Slide 2",
-  },
-  {
-    id: "slide 3",
-    text: "Slide 3",
-  },
-];
+import photo from "./assets/img/foto.jpg";
+// import DogSvg from "./assets/img/dog.svg?react";
+import DogSvg from "./components/DogSvg";
 
 const App = () => {
   return (
-    <div>
-      <Slide slides={slides} />
-    </div>
+    <>
+      {/* <div className="fundo"><img src={photo} alt="Foto" /></div> */}
+      <DogSvg color="#84e" />
+    </>
   );
 };
 
