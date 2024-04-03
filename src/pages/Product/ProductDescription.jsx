@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Slide from "../../components/Slide/Slide";
+import Head from "../../components/Head";
 
 const ProductPage = styled.div`
   display: flex;
@@ -25,6 +26,8 @@ const ProductPrice = styled.p`
 const ProductDescription = ({ dados }) => {
   return (
     <>
+      <Head title={dados.nome} descriptin={dados.descricao} />
+
       <ProductPage>
         <ProductGallery>
           {dados.fotos && <Slide productId={dados.id} slides={dados.fotos} />}

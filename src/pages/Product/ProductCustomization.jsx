@@ -1,10 +1,18 @@
 import React from "react";
+import Head from "../../components/Head";
 
-const ProductCustomization = () => {
+const ProductCustomization = ({ dados }) => {
   return (
-    <div>
-      <h1>Customizado</h1>
-    </div>
+    <>
+      <Head
+        title={`${dados.nome} - Customizado`}
+        descriptin={dados.descricao}
+      />
+
+      <div>
+        <h1>Customizado</h1>
+      </div>
+    </>
   );
 };
 

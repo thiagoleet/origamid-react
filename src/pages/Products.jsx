@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
+import Head from "../components/Head";
 
 const Products = () => {
   const { request, loading } = useFetch();
@@ -30,25 +31,29 @@ const Products = () => {
   }
 
   return (
-    <div className="content">
-      <Title>Produtos</Title>
+    <>
+      <Head title="Produtos" descriptin="Página de produtos" />
 
-      {loading && <p>Carregando...</p>}
+      <div className="content">
+        <Title>Produtos</Title>
 
-      <div className="grid">
-        {dados.map((produto) => {
-          return (
-            <ProductItem
-              onSelect={onSelect}
-              key={produto.id}
-              id={produto.id}
-              nome={produto.nome}
-              fotos={produto.fotos}
-            />
-          );
-        })}
+        {loading && <p>Carregando...</p>}
+
+        <div className="grid">
+          {dados.map((produto) => {
+            return (
+              <ProductItem
+                onSelect={onSelect}
+                key={produto.id}
+                id={produto.id}
+                nome={produto.nome}
+                fotos={produto.fotos}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

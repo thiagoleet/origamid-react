@@ -1,11 +1,15 @@
 import React from "react";
 import Title from "../components/Title";
+import Head from "../components/Head";
 
 const Home = () => {
   return (
-    <div className="content">
-      <Title>Home</Title>
-    </div>
+    <>
+      <Head title="Home" descriptin="Esta é a Home" />
+      <div className="content">
+        <Title>Home</Title>
+      </div>
+    </>
   );
 };
 
