@@ -9,7 +9,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
-import Product from "./pages/Product";
+import Product from "./pages/Product/Product";
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/sobre" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/produtos" element={<Products />} />
-        <Route path="/produto/:id" element={<Product />} />
+        <Route path="/produto/:id/*" element={<Product />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
