@@ -46,7 +46,7 @@ const Product = () => {
 
   return (
     <div className="animeLeft">
-      {loading && <p>Carregando...</p>}
+      {loading && <div className="loading"></div>}
       {!loading && (
         <>
           <Title>{dados.nome}</Title>

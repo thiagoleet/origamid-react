@@ -16,21 +16,23 @@ import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <div className="content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/produtos" element={<Products />} />
-          <Route path="/produto/:id/*" element={<Product />} />
-          <Route path="/contato" element={<Contact />} />
-          <Route path="/*" element={<NotFound />} />
-        </Routes>
-      </div>
-      <Footer />
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/produtos" element={<Products />} />
+            <Route path="/produto/:id/*" element={<Product />} />
+            <Route path="/contato" element={<Contact />} />
+            <Route path="/*" element={<NotFound />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 };
 

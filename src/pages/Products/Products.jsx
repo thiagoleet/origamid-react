@@ -30,7 +30,7 @@ const Products = () => {
       <Head title="Produtos" descriptin="Página de produtos" />
 
       <Title>Produtos</Title>
-      {loading && <p>Carregando...</p>}
+      {loading && <div className="loading"></div>}
       <section className={[styles.produtos, "animeLeft"].join(" ")}>
         {dados.map((produto) => {
           return (
