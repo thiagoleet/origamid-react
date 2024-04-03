@@ -4,23 +4,25 @@ import Slide from "../../components/Slide/Slide";
 import Head from "../../components/Head";
 
 const ProductPage = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 `;
 
-const ProductGallery = styled.div`
-  width: 60%;
-`;
+const ProductGallery = styled.div``;
 
 const ProductInfo = styled.div`
-  width: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.2;
 `;
 
-const ProductPrice = styled.p`
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary);
+const ProductPrice = styled.span`
+  padding: 0.5rem;
+  background: #91fb5d;
+  color: #017e01;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 4px;
 `;
 
 const ProductDescription = ({ dados }) => {
