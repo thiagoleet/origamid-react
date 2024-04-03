@@ -12,6 +12,9 @@ const Header = ({ children }) => {
         <NavLink className="nav-link" to="/sobre">
           Sobre
         </NavLink>
+        <NavLink className="nav-link" to="/login">
+          Login
+        </NavLink>
       </nav>
     </>
   );
