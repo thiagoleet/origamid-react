@@ -132,3 +132,8 @@ hr {
 .grid-item img {
   max-width: 100%;
 }
+
+.content {
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
